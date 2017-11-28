@@ -1,0 +1,51 @@
+{
+  "name": "react-starter",
+  "version": "1.0.0",
+  "description": "A basic template that consists of the essential elements that are required to start building a React application",
+  "scripts": {
+    "build": "webpack -d",
+    "build:watch": "webpack --watch",
+    "lint": "eslint ./webpack.config.js ./src/*.js ./src/**/*.js; exit 0",
+    "lint:fix": "eslint ./webpack.config.js ./src/*.js ./src/**/*.js --fix",
+    "serve": "webpack -d && live-server ./public",
+    "serve:dev": "webpack-dev-server --open",
+    "start": "npm run serve",
+    "test": "echo \"No tests available\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drminnaar/react-starter.git"
+  },
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.12.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-react": "^7.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "live-server": "^1.2.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.5"
+  },
+  "dependencies": {
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1"
+  }
+}

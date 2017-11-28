@@ -1,0 +1,22 @@
+body {
+    background-color: $charcoal;
+    font-family: $font-family;
+}
+
+.container {    
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+}
+
+.logo {
+    margin-top: 30px;
+}
+
+.title {
+    color: $smoke;
+    font-size: 48px;
+    margin-top: 20px;
+    text-transform: uppercase;    
+    text-align: center;
+}
