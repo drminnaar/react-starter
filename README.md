@@ -13,11 +13,21 @@ The template consists of:
 
 ---
 
+## Developed With
+
+* [Node.js](https://nodejs.org/en/) - Javascript runtime
+* [React](https://reactjs.org/) - A javascript library for building user interfaces
+* [Babel](https://babeljs.io/) - A transpiler for javascript
+* [Webpack](https://webpack.js.org/) - A module bundler
+* [SCSS](http://sass-lang.com/) - A css metalanguage
+
+---
+
 ## Related Projects
 
 * [react-clicker]
 
-  A basic React app that allows one to increase, decrease, or reset a counter 
+  A basic React app that allows one to increase, decrease, or reset a counter
 
 * [react-clock-basic]
 
@@ -37,17 +47,7 @@ The template consists of:
 
 * [react-movie-cards]
 
-  A basic application that displays a list of movies as a list of cards  
-
----
-
-## Developed With
-
-* [Node.js](https://nodejs.org/en/) - Javascript runtime
-* [React](https://reactjs.org/) - A javascript library for building user interfaces
-* [Babel](https://babeljs.io/) - A transpiler for javascript
-* [Webpack](https://webpack.js.org/) - A module bundler
-* [SCSS](http://sass-lang.com/) - A css metalanguage
+  A basic application that displays a list of movies as a list of cards
 
 ---
 
