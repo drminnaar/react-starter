@@ -49,6 +49,18 @@ The template consists of:
 
   A basic application that displays a list of movies as a list of cards
 
+* [react-calculator-standard]
+
+  A calculator that provides the essential arithmetic operations, an expression builder, and a complete history of all expressions
+
+* [react-bitcoin-monitor]
+
+  An app that monitors changes in the Bitcoin Price Index (BPI)
+
+* [react-weather-standard]
+
+  A weather application that displays the current weather, daily forecasts, and hourly forecasts based on your current geolocation
+
 ---
 
 ## Getting Started
@@ -159,9 +171,13 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available, s
 
 * **Douglas Minnaar** - *Initial work* - [drminnaar](https://github.com/drminnaar)
 
-[react-clicker]: https://github.com/drminnaar/react-clicker.git
-[react-clock-basic]: https://github.com/drminnaar/react-clock-basic.git
-[react-timer-basic]: https://github.com/drminnaar/react-timer-basic.git
-[react-timer-advanced]: https://github.com/drminnaar/react-timer-advanced.git
-[react-masterminds]: https://github.com/drminnaar/react-masterminds.git
-[react-movie-cards]: https://github.com/drminnaar/react-movie-cards.git
+[react-starter]: https://github.com/drminnaar/react-starter
+[react-clicker]: https://github.com/drminnaar/react-clicker
+[react-clock-basic]: https://github.com/drminnaar/react-clock-basic
+[react-timer-basic]: https://github.com/drminnaar/react-timer-basic
+[react-timer-advanced]: https://github.com/drminnaar/react-timer-advanced
+[react-masterminds]: https://github.com/drminnaar/react-masterminds
+[react-movie-cards]: https://github.com/drminnaar/react-movie-cards
+[react-calculator-standard]: https://github.com/drminnaar/react-calculator-standard
+[react-bitcoin-monitor]: https://github.com/drminnaar/react-bitcoin-monitor
+[react-weather-standard]: https://github.com/drminnaar/react-weather-standard
