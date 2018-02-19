@@ -1,54 +1,15 @@
-const path = require('path');
-const CleanWebPackPlugin = require('clean-webpack-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
+const webpackMerge = require('webpack-merge');
+const commonConfig = require('./config/webpack.common.config');
 
-module.exports = {
-    entry: './src/index.js',
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'public')
-    },
-    module: {
-        rules: [
-            {
-                enforce: 'pre',
-                test: /\.js$/,
-                loader: 'eslint-loader',
-                options: {
-                    failOnWarning: true,
-                    failOnerror: true
-                },
-                exclude: /node_modules/
-            },
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/
-            },
-            {
-                test: /\.s?css$/,
-                use: [ 'style-loader', 'css-loader', 'sass-loader' ],
-                exclude: /node_modules/
-            },
-            {
-                test: /\.svg|.png|.jpg$/,
-                loader: 'url-loader',
-                exclude: /node_modules/
-            }
-        ]
-    },
-    plugins: [
-        new CleanWebPackPlugin([ 'public' ], { root: path.resolve(__dirname)}),
-        new HtmlWebPackPlugin({
-            template: './src/index.html',
-            favicon: './src/favicon.ico',
-            inject: false
-        })
-    ],
-    devtool: 'cheap-module-eval-source-map',
-    devServer: {
-        contentBase: path.resolve(__dirname, 'public'),
-        compress: true,
-        port: 9000
-    }
+module.exports = (env) => {
+    
+    const determineAddons = (addons) => {
+        return [...[addons]]
+            .filter(addon => Boolean(addon))
+            .map(addon => require(`./config/addons/webpack.${addon}.js`));
+    };
+
+    const envConfig = require(`./config/webpack.${env.env}.config`);
+
+    return webpackMerge(commonConfig, envConfig, ...determineAddons(env.addons));
 };

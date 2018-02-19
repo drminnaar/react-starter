@@ -11,6 +11,10 @@ The template consists of:
 * SCSS setup and configuration
 * the main React components to get started
 
+Additionaly, the template provides a development and production webpack configuration.
+
+The template also allows one to include specific plugins as part of build. [Please see here for more detail](#build-application-with-bundleanalayzer-plugin-included)
+
 ---
 
 ## Developed With
@@ -61,6 +65,10 @@ The template consists of:
 
   A weather application that displays the current weather, daily forecasts, and hourly forecasts based on your current geolocation
 
+* [react-redux-quotlify]
+
+  A quote browser and manager that allows one to search famous quotes and save them to a data store.
+
 ---
 
 ## Getting Started
@@ -102,36 +110,47 @@ Follow the following steps to get development environment running.
    ```bash
    cd react-starter
    npm install
-   npm dedupe
    ```
 
 ### Build
 
-* Build application
+#### Build Application
 
-  This command will also run ESLint as part of build process.
+dev | prod
+:---: | :---:
+npm run build:dev | npm run build:prod
 
-  ```bash
-  npm run build
-  ```
+#### Build Application And Watch For Changes
 
-* Build application and start watching for changes
+dev | prod
+:---: | :---:
+npm run build:dev:watch | npm run build:prod:watch
 
-  This command will also run ESLint as part of build process.
+#### Build Application With BundleAnalayzer Plugin Included
 
-  ```bash
-  npm run build:watch
-  ```
+dev | prod
+:---: | :---:
+npm run build:dev:bundleanalyze | npm run build:prod:bundleanalyze
+
+After running the above command, a browser window will open displaying an interactive graph resembling the following image:
+
+![bundle-analyzer](https://user-images.githubusercontent.com/33935506/36382812-eadf199e-1592-11e8-9681-cf5ccf67951f.png)
+
+#### Build Application With BundleBuddy Plugin Included
+
+dev | prod
+:---: | :---:
+npm run build:dev:bundlebuddy | npm run build:prod:bundlebuddy
 
 ### Run ESlint
 
-* Lint project using ESLint
+#### Lint Project Using ESLint
 
   ```bash
   npm run lint
   ```
 
-* Lint project using ESLint, and autofix
+#### Lint Project Using ESLint, and autofix
 
   ```bash
   npm run lint:fix
@@ -139,25 +158,37 @@ Follow the following steps to get development environment running.
 
 ### Run
 
-* Run start
+#### Run Start
 
-  This will run the _'serve'_ npm task
+This will run the _'serve:dev'_ npm task
 
-  ```bash
-  npm start
-  ```
+```bash
+npm start
+```
 
-* Run webpack dev server
+#### Run Dev Server
 
-  ```bash
-  npm run serve:dev
-  ```
+```bash
+npm run serve:dev
+```
 
-* Alternatively run live-server (simple development http server with live reload capability)
+#### Run Dev Server With Dashboard
 
-  ```bash
-  npm run serve
-  ```
+```bash
+npm run serve:dev:dashboard
+```
+
+The above command will display a dashboard view in your console resembling the following image:
+
+![webpack-dashboard](https://user-images.githubusercontent.com/33935506/36382813-eb10b0a8-1592-11e8-9506-fd25db65a258.png)
+
+#### Run Prod Server
+
+This command will build application using production settings and start the application using _live-server_
+
+```bash
+npm run serve:prod
+```
 
 ---
 
@@ -181,3 +212,4 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available, s
 [react-calculator-standard]: https://github.com/drminnaar/react-calculator-standard
 [react-bitcoin-monitor]: https://github.com/drminnaar/react-bitcoin-monitor
 [react-weather-standard]: https://github.com/drminnaar/react-weather-standard
+[react-redux-quotlify]: https://github.com/drminnaar/react-redux-quotlify
