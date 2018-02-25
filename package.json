@@ -18,7 +18,8 @@
     "lint": "eslint .; exit 0",
     "lint:fix": "eslint . --fix; exit 0",
     "start": "npm run serve:dev",
-    "test": "echo \"No tests available\"; exit 0"
+    "test": "echo \"No tests available\"; exit 0",
+    "webpack-defaults": "webpack-defaults"
   },
   "repository": {
     "type": "git",
@@ -34,30 +35,30 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "bundle-buddy-webpack-plugin": "^0.3.0",
     "clean-webpack-plugin": "^0.1.18",
-    "css-loader": "^0.28.9",
-    "eslint": "^4.18.0",
+    "css-loader": "^0.28.10",
+    "eslint": "^4.18.1",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-react": "^7.6.1",
+    "eslint-plugin-react": "^7.7.0",
     "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.6",
+    "file-loader": "^1.1.9",
     "html-webpack-plugin": "^2.30.1",
     "live-server": "^1.2.0",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
-    "uglifyjs-webpack-plugin": "^1.2.0",
+    "uglifyjs-webpack-plugin": "^1.2.2",
     "url-loader": "^0.6.2",
     "webpack": "^3.11.0",
-    "webpack-bundle-analyzer": "^2.10.0",
+    "webpack-bundle-analyzer": "^2.10.1",
     "webpack-dashboard": "^1.1.1",
     "webpack-dev-server": "^2.11.1",
-    "webpack-merge": "^4.1.1"
+    "webpack-merge": "^4.1.2"
   },
   "dependencies": {
     "react": "^16.2.0",

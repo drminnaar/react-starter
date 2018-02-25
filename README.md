@@ -1,3 +1,5 @@
+![react-starter](https://user-images.githubusercontent.com/33935506/36640446-894a1a78-1a27-11e8-970a-6cbf95d76799.png)
+
 # React Starter
 
 A basic template that consists of the essential elements that are required to start building a React application.
@@ -28,6 +30,10 @@ The template also allows one to include specific plugins as part of build. [Plea
 ---
 
 ## Related Projects
+
+* [react-redux-starter]
+
+  A basic template that consists of the essential elements that are required to start building a Single Page Application using React, React Router, Redux, Bootstrap 4, Sass, and Webpack.
 
 * [react-clicker]
 
@@ -203,6 +209,7 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available, s
 * **Douglas Minnaar** - *Initial work* - [drminnaar](https://github.com/drminnaar)
 
 [react-starter]: https://github.com/drminnaar/react-starter
+[react-redux-starter]: https://github.com/drminnaar/react-redux-starter
 [react-clicker]: https://github.com/drminnaar/react-clicker
 [react-clock-basic]: https://github.com/drminnaar/react-clock-basic
 [react-timer-basic]: https://github.com/drminnaar/react-timer-basic
