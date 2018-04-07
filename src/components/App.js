@@ -9,9 +9,9 @@ export default class App extends Component {
 
     render() {
         return (
-            <div className='container'>
-                <div className='title'>React Starter</div>
+            <div className='container'>                
                 <img className='logo' src={logo} />
+                <h1 className='title'>React Starter</h1>
             </div>
         );
     }

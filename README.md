@@ -2,7 +2,7 @@
 
 # React Starter
 
-A basic template that consists of the essential elements that are required to start building a React application.
+A basic template that consists of the essential elements that are required to start building a React (v16.3) application using Webpack (v4).
 
 The template consists of:
 
@@ -21,10 +21,10 @@ The template also allows one to include specific plugins as part of build. [Plea
 
 ## Developed With
 
-* [Node.js](https://nodejs.org/en/) - Javascript runtime
-* [React](https://reactjs.org/) - A javascript library for building user interfaces
-* [Babel](https://babeljs.io/) - A transpiler for javascript
-* [Webpack](https://webpack.js.org/) - A module bundler
+* [Node.js 8.11](https://nodejs.org/en/) - Javascript runtime
+* [React 16.3](https://reactjs.org/) - A javascript library for building user interfaces
+* [Babel 6.26](https://babeljs.io/) - A transpiler for javascript
+* [Webpack 4.x](https://webpack.js.org/) - A module bundler
 * [SCSS](http://sass-lang.com/) - A css metalanguage
 
 ---
@@ -141,12 +141,6 @@ npm run build:dev:bundleanalyze | npm run build:prod:bundleanalyze
 After running the above command, a browser window will open displaying an interactive graph resembling the following image:
 
 ![bundle-analyzer](https://user-images.githubusercontent.com/33935506/36382812-eadf199e-1592-11e8-9681-cf5ccf67951f.png)
-
-#### Build Application With BundleBuddy Plugin Included
-
-dev | prod
-:---: | :---:
-npm run build:dev:bundlebuddy | npm run build:prod:bundlebuddy
 
 ### Run ESlint
 

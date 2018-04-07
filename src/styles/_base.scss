@@ -3,20 +3,21 @@ body {
     font-family: $font-family;
 }
 
-.container {    
-    text-align: center;
-    align-content: center;
-    vertical-align: middle;
+.container {
+    align-items: center;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;        
+    justify-content: center;
 }
 
 .logo {
-    margin-top: 30px;
+    padding-top: 20px;
 }
 
 .title {
     color: $smoke;
     font-size: 48px;
-    margin-top: 20px;
-    text-transform: uppercase;    
-    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px black;
 }

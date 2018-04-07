@@ -1,13 +1,15 @@
 const webpack = require('webpack');
-const CleanWebPackPlugin = require('clean-webpack-plugin');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const CleanPlugin = require('clean-webpack-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const commonPaths = require('./common-paths');
 
 const config = {
-    entry: './src/index.js',
+    entry: {
+        main: ['./src/index.js']
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].js',
         path: commonPaths.outputPath
     },
     module: {
@@ -29,7 +31,7 @@ const config = {
             },
             {
                 test: /\.s?css$/,
-                use: ExtractTextWebpackPlugin.extract({
+                use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
                         {
@@ -39,26 +41,39 @@ const config = {
                             loader: 'sass-loader'
                         }
                     ]
-                }),
-                exclude: /node_modules/
+                })
             },
             {
-                test: /\.svg|.png|.jpg$/,
-                loader: 'url-loader',
+                test: /\.(png|svg|jpg|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'images/[name].[ext]'
+                        }
+                    }
+                ],
                 exclude: /node_modules/
             }
         ]
     },
+    optimization: {
+        splitChunks: {
+            cacheGroups: {
+                commons: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all'
+                }
+            }
+        }
+    },
     plugins: [
         new webpack.ProgressPlugin(),
-        new ExtractTextWebpackPlugin('styles.css'),
-        new webpack.optimize.CommonsChunkPlugin({
-            filename: 'common.js',
-            minChunks: 3,
-            name: 'common'
-        }),
-        new CleanWebPackPlugin(['public'], { root: commonPaths.root }),
-        new HtmlWebPackPlugin({
+        new ExtractTextPlugin('[name].css'),
+        new CleanPlugin(['../public'], { allowExternal: true }),
+        new HtmlPlugin({
+            filename: 'index.html',
             template: commonPaths.template,
             favicon: commonPaths.favicon,
             inject: true

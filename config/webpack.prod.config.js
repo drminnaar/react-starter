@@ -1,10 +1,11 @@
-const UglifyJsWebpackPlugin = require('uglifyjs-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 
 const config = {
+    mode: 'production',
     devtool: 'source-map',
     plugins: [
-        new UglifyJsWebpackPlugin({
+        new UglifyJsPlugin({
             sourceMap: true
         }),
         new webpack.DefinePlugin({
