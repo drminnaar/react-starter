@@ -2,7 +2,7 @@
 
 # React Starter
 
-A basic template that consists of the essential elements that are required to start building a React (v16.3) application using Webpack (v4).
+A basic template that consists of the essential elements that are required to start building a React (v16.4) application using Webpack (v4).
 
 The template consists of:
 
@@ -22,7 +22,7 @@ The template also allows one to include specific plugins as part of build. [Plea
 ## Developed With
 
 * [Node.js 8.11](https://nodejs.org/en/) - Javascript runtime
-* [React 16.3](https://reactjs.org/) - A javascript library for building user interfaces
+* [React 16.4](https://reactjs.org/) - A javascript library for building user interfaces
 * [Babel 6.26](https://babeljs.io/) - A transpiler for javascript
 * [Webpack 4.x](https://webpack.js.org/) - A module bundler
 * [SCSS](http://sass-lang.com/) - A css metalanguage
