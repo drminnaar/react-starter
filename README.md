@@ -4,9 +4,9 @@
 
 A basic template that consists of the essential elements that are required to start building a React (v16.4) application using Webpack (v4).
 
-The template consists of:
+The template are consists of:
 
-* a typcial project layout structure
+* a typical project layout structure
 * babel setup and configuration
 * webpack setup and configuration
 * eslint setup and configuration
@@ -25,7 +25,7 @@ The template also allows one to include specific plugins as part of build. [Plea
 * [React 16.4](https://reactjs.org/) - A javascript library for building user interfaces
 * [Babel 6.26](https://babeljs.io/) - A transpiler for javascript
 * [Webpack 4.x](https://webpack.js.org/) - A module bundler
-* [SCSS](http://sass-lang.com/) - A css metalanguage
+* [SCSS](http://sass-lang.com/) - A css meta language
 
 ---
 
