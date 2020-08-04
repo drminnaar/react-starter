@@ -44,22 +44,22 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
-    "live-server": "^1.2.0",
-    "node-sass": "^4.9.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.14.1",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^1.0.1",
-    "webpack": "^4.9.1",
+    "webpack": "^4.44.1",
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^2.1.4",
     "webpack-dashboard": "^2.0.0",
-    "webpack-dev-server": "^3.1.4",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
     "normalize.css": "^8.0.0",
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.13.1"
   }
 }
