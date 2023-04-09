@@ -6,14 +6,14 @@ A basic template that consists of the essential elements that are required to st
 
 The template consists of:
 
-* a typcial project layout structure
+* a typical project layout structure
 * babel setup and configuration
 * webpack setup and configuration
 * eslint setup and configuration
 * SCSS setup and configuration
 * the main React components to get started
 
-Additionaly, the template provides a development and production webpack configuration.
+Additionally, the template provides a development and production webpack configuration.
 
 The template also allows one to include specific plugins as part of build. [Please see here for more detail](#build-application-with-bundleanalayzer-plugin-included)
 
@@ -132,7 +132,7 @@ dev | prod
 :---: | :---:
 npm run build:dev:watch | npm run build:prod:watch
 
-#### Build Application With BundleAnalayzer Plugin Included
+#### Build Application With BundleAnalyzer Plugin Included
 
 dev | prod
 :---: | :---:
