@@ -1,15 +1,24 @@
 import React from 'react';
-import logo from '@/assets/logo.png';
+import styles from './_app-style.module.scss';
 
+const { useState } = React;
 const App: React.FC = () => {
-    console.log(logo);
+    const [count, setCount] = useState(0);
+
+    const addOne = () => {
+        setCount(v => v + 1);
+    };
+
     return (
-        <div className="container">
-            <img
-                className="logo"
-                src={logo}
-            />
-            <h1 className="title">React Starter</h1>
+        <div className={styles.container}>
+            <h1 className={styles.title}>React Starter</h1>
+            <p className={styles.count}>{count}</p>
+            <p
+                className={styles.addCount}
+                onClick={addOne}
+            >
+                Click here to add count!
+            </p>
         </div>
     );
 };

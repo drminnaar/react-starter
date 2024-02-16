@@ -1,4 +1,3 @@
-const Config = require('webpack-chain');
 const { loader: miniLoader } = require('mini-css-extract-plugin');
 
 /**
@@ -21,12 +20,12 @@ const genAutoFunc = (suffix = 'scss') => {
 const genCssModulesOption = (suffix = 'scss') => ({
     auto: genAutoFunc(suffix),
     localIdentName: '[local]__[hash:base64]',
-    exportLocalsConvention: 'camelCase',
+    // exportLocalsConvention: 'camelCase',
 });
 
 /**
  * @description config style loads
- * @param {Config} confInstance
+ * @param {import('webpack-chain')} confInstance
  * @param {Record<string, unknown>}  otherConf
  * @returns the config instance
  */

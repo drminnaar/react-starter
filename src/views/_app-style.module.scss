@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px;
+
+    .title {
+        margin: .5em 0;
+    }
+
+    .count {
+        margin: .5em 0;
+    }
+
+    .addCount {
+        margin: .5em 0;
+        padding: .5em;
+        border-radius: 8px;
+        background-color: #409eff;
+        color: #fff;
+        width: 240px;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
