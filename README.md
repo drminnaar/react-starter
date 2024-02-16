@@ -6,7 +6,7 @@ A basic template that consists of the essential elements that are required to st
 
 The template consists of:
 
-* a typcial project layout structure
+* a typical project layout structure
 * babel setup and configuration
 * webpack setup and configuration
 * eslint setup and configuration
@@ -102,46 +102,16 @@ Follow the following steps to get development environment running.
 
 * Clone _'react-starter'_ repository from GitHub
 
-  ```bash
-  git clone https://github.com/drminnaar/react-starter.git
-  ```
-
-   _OR USING SSH_
-
-  ```bash
-  git clone git@github.com:drminnaar/react-starter.git
+  ```sh
+  npx degit https://github.com/My-Project-Template/react-starter-16.git <YOUR_PROJECT>
   ```
 
 * Install node modules
 
    ```bash
-   cd react-starter
-   npm install
+   cd <YOUR_PROJECT>
+   npm i
    ```
-
-### Build
-
-#### Build Application
-
-dev | prod
-:---: | :---:
-npm run build:dev | npm run build:prod
-
-#### Build Application And Watch For Changes
-
-dev | prod
-:---: | :---:
-npm run build:dev:watch | npm run build:prod:watch
-
-#### Build Application With BundleAnalayzer Plugin Included
-
-dev | prod
-:---: | :---:
-npm run build:dev:bundleanalyze | npm run build:prod:bundleanalyze
-
-After running the above command, a browser window will open displaying an interactive graph resembling the following image:
-
-![bundle-analyzer](https://user-images.githubusercontent.com/33935506/36382812-eadf199e-1592-11e8-9681-cf5ccf67951f.png)
 
 ### Run Build
 
@@ -179,3 +149,7 @@ I use [SemVer](http://semver.org/) for versioning. For the versions available, s
 [react-bitcoin-monitor]: https://github.com/drminnaar/react-bitcoin-monitor
 [react-weather-standard]: https://github.com/drminnaar/react-weather-standard
 [react-redux-quotlify]: https://github.com/drminnaar/react-redux-quotlify
+
+### Co-Authors
+
+* [**Yueb**](https://github.com/Allen-Bayern)
