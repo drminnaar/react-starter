@@ -110,6 +110,7 @@ Follow the following steps to get development environment running.
 
    ```bash
    cd <YOUR_PROJECT>
+   rm -rf package-lock.json
    npm i
    ```
 
