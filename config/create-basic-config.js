@@ -149,7 +149,7 @@ const createBasicConfig = (opts = null) => {
                     .devtool('source-map')
                     // set devServer
                     .devServer.compress(true)
-                    .port(9222)
+                    .port(7200)
                     .hot(true)
                     .open(false)
                     .end()
