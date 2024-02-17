@@ -78,6 +78,12 @@ const genStyleConfigWithPreloader = styleType => {
         if (styleType === 'less') {
             regex = /\.less$/i;
             selfLoaderName = 'less-loader';
+            selfLoaderOptions = Object.assign(selfLoaderOptions, {
+                lessOptions: {
+                    // If you use antd as your project's UI library, this line is very important!
+                    javascriptEnabled: true,
+                },
+            });
         }
 
         // for stylus
