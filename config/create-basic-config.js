@@ -1,18 +1,21 @@
-const webpack = require('webpack');
 const Config = require('webpack-chain');
+
+// --- funcs ---
 const compose = require('compose-function');
 const { resolve: pathResolve } = require('path');
-const { loadStyles } = require('./modules/load-style');
-const { loadJs } = require('./modules/load-js');
+const { loadStyles, loadJs } = require('./modules');
 
-const { ProgressPlugin, HotModuleReplacementPlugin, DefinePlugin } = webpack;
+// --- plugins ---
+const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const { ProgressPlugin, HotModuleReplacementPlugin, DefinePlugin } = webpack;
 
+// --- helper functions ---
 /**
  * @description Modify the relative path to the root path of the project using `path.resolve`
  * @param suffix the relative path relative to the root path of the project
@@ -20,9 +23,14 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
  */
 const withBasePath = (suffix = '') => pathResolve(__dirname, `../${suffix}`);
 
-// get mb value
-const mb = (i = 1) => 1024 * i;
+/**
+ * @description get KB value
+ * @param {number} i kb number
+ * @returns KB
+ */
+const kb = (i = 1) => 1024 * i;
 
+// --- createBasicConfig function ---
 /**
  * @description Create a basic config using webpack-chain
  * @param {Record<string, unknown>} opts Self-Defined options
@@ -85,7 +93,7 @@ const createBasicConfig = (opts = null) => {
             .use('url-loader')
             .loader('url-loader')
             .options({
-                limit: mb(2),
+                limit: kb(10),
                 name: 'img/[name].[hash:7].[ext]',
             })
             .end()
@@ -125,6 +133,17 @@ const createBasicConfig = (opts = null) => {
             .plugin('ForkTsCheckerWebpackPlugin')
             .use(ForkTsCheckerWebpackPlugin)
             .end()
+            // check eslint
+            .plugin('ESLintPlugin')
+            .use(ESLintPlugin, [
+                {
+                    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.mjs', '.cjs'],
+                    fix: true,
+                    threads: true,
+                    exclude: ['node_modules'],
+                },
+            ])
+            .end()
             .when(isDev, conf => {
                 conf.mode('development')
                     .devtool('source-map')
@@ -136,17 +155,6 @@ const createBasicConfig = (opts = null) => {
                     .end()
                     .plugin('HotModuleReplacementPlugin')
                     .use(HotModuleReplacementPlugin)
-                    .end()
-                    // check eslint
-                    .plugin('ESLintPlugin')
-                    .use(ESLintPlugin, [
-                        {
-                            extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.mjs', '.cjs'],
-                            fix: true,
-                            threads: true,
-                            exclude: ['node_modules'],
-                        },
-                    ])
                     .end();
             })
             .when(isProd, conf => {
