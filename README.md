@@ -2,7 +2,7 @@
 
 # React Starter (with Hooks)
 
-A basic template that consists of the essential elements that are required to start building a React (v16.8+) application using Webpack (v4).
+A basic template that consists of the essential elements that are required to start building a React (v16.12+) application using Webpack (v4).
 
 The template consists of:
 
@@ -22,7 +22,7 @@ The template also allows one to include specific plugins as part of build. [Plea
 ## Developed With
 
 * [Node.js 10.X](https://nodejs.org/en/) - Javascript runtime
-* [React 16.8+](https://reactjs.org/) - A javascript library for building user interfaces, but with React Hooks
+* [React 16.12+](https://reactjs.org/) - A javascript library for building user interfaces, but with React Hooks
 * [Babel 7.x](https://babeljs.io/) - A transpiler for javascript
 * [Webpack 4.x](https://webpack.js.org/) - A module bundler
 * [SCSS](http://sass-lang.com/) - A css metalanguage
