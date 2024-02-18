@@ -26,7 +26,7 @@ The template also allows one to include specific plugins as part of build. [Plea
 * [Babel 7.x](https://babeljs.io/) - A transpiler for javascript
 * [Webpack 4.x](https://webpack.js.org/) - A module bundler
 * [SCSS](http://sass-lang.com/) - A css metalanguage
-* [TypeScript 3.9](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
+* [TypeScript 4.9](https://www.typescriptlang.org/) - TypeScript is JavaScript with syntax for types.
 
 ---
 
@@ -91,10 +91,10 @@ The following software is required to be installed on your system:
 
 Type the following commands in the terminal to verify your node and npm versions
 
-  ```bash
-  node -v
-  npm -v
-  ```
+```bash
+node -v
+npm -v
+```
 
 ### Install
 
@@ -102,17 +102,17 @@ Follow the following steps to get development environment running.
 
 * Clone _'react-starter'_ repository from GitHub
 
-  ```sh
-  npx degit https://github.com/My-Project-Template/react-starter-16.git <YOUR_PROJECT>
-  ```
+```sh
+npx degit https://github.com/My-Project-Template/react-starter-16.git <YOUR_PROJECT>
+```
 
 * Install node modules
 
-   ```bash
-   cd <YOUR_PROJECT>
-   rm -rf package-lock.json
-   npm i
-   ```
+```bash
+cd <YOUR_PROJECT>
+rm -rf package-lock.json
+npm i
+```
 
 ### Run Build
 
