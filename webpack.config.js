@@ -1,15 +1,11 @@
-const webpackMerge = require('webpack-merge');
-const commonConfig = require('./config/webpack.common.config');
+const { createBasicConfig } = require('./config/create-basic-config');
 
-module.exports = (env) => {
-    
-    const determineAddons = (addons) => {
-        return [...[addons]]
-            .filter(addon => Boolean(addon))
-            .map(addon => require(`./config/addons/webpack.${addon}.js`));
-    };
+module.exports = environments => {
+    const { dev, prod } = environments || {};
+    const { NODE_ENV = 'development' } = process.env;
 
-    const envConfig = require(`./config/webpack.${env.env}.config`);
-
-    return webpackMerge(commonConfig, envConfig, ...determineAddons(env.addons));
+    return createBasicConfig({
+        isDev: !!dev && NODE_ENV === 'development',
+        isProd: !!prod && NODE_ENV === 'production',
+    }).toConfig();
 };
