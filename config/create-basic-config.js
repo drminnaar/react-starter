@@ -177,7 +177,7 @@ const createBasicConfig = (opts = null) => {
                     .plugin('DefinePlugin')
                     .use(DefinePlugin, [
                         {
-                            'process.env.NODE_ENV': JSON.stringify('production'),
+                            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
                         },
                     ])
                     .end();
